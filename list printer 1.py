@@ -1,3 +1,4 @@
+# this is the first version
 import statistics
 awdhj = []
 how_many_numbers = int(input('enter the amount of numbers for the list: '))
