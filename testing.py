@@ -5,9 +5,11 @@ the_list = []
 
 # This function contains the code that fills the list.
 def list_printer():
-    how_many_numbers = int(input('enter the amount of numbers for the list: '))
+    times_asked = 0
+    how_many_numbers = int(input('Enter the amount of numbers you want there to be in your list: '))
     for x in range(how_many_numbers):
-        enter_number_in_list = int(input('enter a number: '))
+        times_asked = 1 + times_asked
+        enter_number_in_list = int(input(f'{times_asked}. Enter a number: '))
         the_list.append(enter_number_in_list)
 
 
