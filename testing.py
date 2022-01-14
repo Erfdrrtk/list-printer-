@@ -1,4 +1,4 @@
-#  version 1.1
+#  testing the next version. done!!
 
 import statistics
 the_list = []
@@ -25,7 +25,8 @@ except:
     quit()
 
 
-print('the list: ', the_list)
+print(f'''
+The list: {the_list} ''')
 
 count = 0
 print('''---------------------------
