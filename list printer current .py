@@ -52,19 +52,21 @@ print(f'biggest: {biggest}')
 print(f'smallest: {smallest}')
 print(f'median: {median}')
 
-def number_finder():
-    what_is_range = int(input('Enter the range: '))
-    for number in the_list:
-        if number in range(what_is_range):
-            print(f'Is within 0-{what_is_range}: {number}')
-        else:
-            print(f"Is not within 0-{what_is_range}: {number} ")
+
 
 check_range = input('''
 Do you want me to check if a certain number is in a list? If so, enter 'yes':  ''')
-if check_range == 'yes':
-    print(f'Here is your list: {the_list}')
-    number_finder()
-else:
-    print('Ok. thank you for using list printer :).')
-    quit()
+try:
+    if check_range == 'yes':
+        print(f'Here is your list: {the_list}')
+        what_is_range = int(input('Enter the range: '))
+        for number in the_list:
+            if number in range(what_is_range):
+                print(f'Is within 0-{what_is_range}: {number}')
+            else:
+                print(f"Is not within 0-{what_is_range}: {number} ")
+    else:
+        print('Ok. thank you for using list printer :).')
+        quit()
+except:
+    quit(print('pls dont breAK the code'))

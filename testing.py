@@ -1,4 +1,4 @@
-#  current version 1/14 11.10am
+#  current version 1/14 8.03pm
 
 import statistics
 the_list = []
@@ -37,7 +37,7 @@ for number in the_list:
     print(f'{count}          {number}')
 
 
-
+# the calculations
 print('''---------------------------
 the calculations:
 ''')
@@ -52,19 +52,31 @@ print(f'biggest: {biggest}')
 print(f'smallest: {smallest}')
 print(f'median: {median}')
 
-def number_finder():
-    what_is_range = int(input('Enter the range: '))
-    for number in the_list:
-        if number in range(what_is_range):
-            print(f'This number is within 0-{what_is_range}: {number}')
-        else:
-            print(f"This number is not within {what_is_range}: {number} ")
+# this part checks how many numbers are within a certain range(that the user inputs)
+print('''
+--- range checker ---''')
 
+amount_of_numbers_in_theRange = 0
+amount_of_numbers_not_in_theRange = 0
 check_range = input('''
 Do you want me to check if a certain number is in a list? If so, enter 'yes':  ''')
-if check_range == 'yes':
-    print(f'Here is your list: {the_list}')
-    number_finder()
-else:
-    print('Ok. thank you for using list printer :).')
-    quit()
+try:
+    if check_range == 'yes':
+        print(f'Here is your list: {the_list}')
+        what_is_range = int(input('Enter the range: '))
+        for number in the_list:
+            if number in range(what_is_range + 1):
+                amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
+                print(f'Is within 0-{what_is_range}: {number}')
+            else:
+                amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
+                print(f"Is not within 0-{what_is_range}: {number} ")
+        print(' ')
+        print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
+        print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+
+    else:
+        print('Ok. thank you for using list printer :).')
+        quit()
+except:
+    quit(print('pls dont breAK the code'))
