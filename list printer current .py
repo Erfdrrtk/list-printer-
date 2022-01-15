@@ -1,4 +1,4 @@
-#  current version 1/14 11.10am
+#  current version 1/14 8.03pm
 
 import statistics
 the_list = []
@@ -36,6 +36,8 @@ for number in the_list:
     count = 1 + count
     print(f'{count}          {number}')
 
+
+
 print('''---------------------------
 the calculations:
 ''')
@@ -49,3 +51,20 @@ print(f'average: {int(average)}')
 print(f'biggest: {biggest}')
 print(f'smallest: {smallest}')
 print(f'median: {median}')
+
+def number_finder():
+    what_is_range = int(input('Enter the range: '))
+    for number in the_list:
+        if number in range(what_is_range):
+            print(f'Is within 0-{what_is_range}: {number}')
+        else:
+            print(f"Is not within 0-{what_is_range}: {number} ")
+
+check_range = input('''
+Do you want me to check if a certain number is in a list? If so, enter 'yes':  ''')
+if check_range == 'yes':
+    print(f'Here is your list: {the_list}')
+    number_finder()
+else:
+    print('Ok. thank you for using list printer :).')
+    quit()
