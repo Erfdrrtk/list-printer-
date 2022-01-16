@@ -102,8 +102,10 @@ with open('out.txt', 'w') as f:
         print(' ')
         print('--- range checker ---')
         print(f'Here is your list: {the_list}')
+        amount_of_numbers_not_in_theRange = 0
+        amount_of_numbers_in_theRange = 0
         for number in the_list:
-            if number in range(what_is_range + 1):
+            if number in range(what_is_range):
                 amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
                 print(f'Is within 0-{what_is_range}: {number}')
             else:
