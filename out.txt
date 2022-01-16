@@ -1,27 +1,57 @@
-The list: [23, 456, 57, 45, 2] 
+The list: [23445, 457, 456, 43556, 456, 456, 456, 34, 34, 34, 34, 34, 34, 34, 34, 34, 4556, 56, 556, 344] 
 ---------------------------
  count | number 
-1          23
-2          456
-3          57
-4          45
-5          2
+1          23445
+2          457
+3          456
+4          43556
+5          456
+6          456
+7          456
+8          34
+9          34
+10          34
+11          34
+12          34
+13          34
+14          34
+15          34
+16          34
+17          4556
+18          56
+19          556
+20          344
 ---------------------------
 the calculations:
  
-sum: 583
-average: 116
-biggest: 456
-smallest: 2
-median: 45
+sum: 75100
+average: 3755
+biggest: 43556
+smallest: 34
+median: 200.0
  
 --- range checker ---
-Here is your list: [23, 456, 57, 45, 2]
-Is not within 0-20: 23 
+Here is your list: [23445, 457, 456, 43556, 456, 456, 456, 34, 34, 34, 34, 34, 34, 34, 34, 34, 4556, 56, 556, 344]
+Is not within 0-20: 23445 
+Is not within 0-20: 457 
 Is not within 0-20: 456 
-Is not within 0-20: 57 
-Is not within 0-20: 45 
-Is within 0-20: 2
+Is not within 0-20: 43556 
+Is not within 0-20: 456 
+Is not within 0-20: 456 
+Is not within 0-20: 456 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 34 
+Is not within 0-20: 4556 
+Is not within 0-20: 56 
+Is not within 0-20: 556 
+Is not within 0-20: 344 
  
-Amount of numbers within 0-20: 2
-Amount of numbers not within 0-20: 8
+Amount of numbers within 0-20: 0
+Amount of numbers not within 0-20: 40
