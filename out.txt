@@ -1,1 +1,27 @@
-cats are epic :D
+The list: [23, 456, 57, 45, 2] 
+---------------------------
+ count | number 
+1          23
+2          456
+3          57
+4          45
+5          2
+---------------------------
+the calculations:
+ 
+sum: 583
+average: 116
+biggest: 456
+smallest: 2
+median: 45
+ 
+--- range checker ---
+Here is your list: [23, 456, 57, 45, 2]
+Is not within 0-20: 23 
+Is not within 0-20: 456 
+Is not within 0-20: 57 
+Is not within 0-20: 45 
+Is within 0-20: 2
+ 
+Amount of numbers within 0-20: 2
+Amount of numbers not within 0-20: 8
