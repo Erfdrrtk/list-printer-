@@ -1,4 +1,4 @@
-#  current version 1/14 8.03pm
+#  current version 1/15 8.03pm
 
 import statistics
 the_list = []
@@ -18,7 +18,6 @@ try:
 except:
     print("Only numbers please. Manually restart the code because I don't know how to make it restart itself. ")
     quit()
-
 
 print(f'''
 The list: {the_list} ''')

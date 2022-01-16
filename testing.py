@@ -1,4 +1,4 @@
-#  current version 1/14 8.03pm
+#  test to get the results onto a file
 
 import statistics
 the_list = []
