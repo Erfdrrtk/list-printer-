@@ -1,6 +1,5 @@
 #  current version 1/15 8.03pm
 
-import statistics
 the_list = []
 
 print('''--- welcome to list printer ---
@@ -32,6 +31,8 @@ for number in the_list:
 
 
 # the calculations
+import statistics
+
 print('''---------------------------
 the calculations:
 ''')
