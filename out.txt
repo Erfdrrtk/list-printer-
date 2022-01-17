@@ -1,27 +1,27 @@
-The list: [12, 30, 1, 90, 55] 
+The list: [45, 67, 34, 56, 4] 
 ---------------------------
  count | number 
-1          12
-2          30
-3          1
-4          90
-5          55
+1          45
+2          67
+3          34
+4          56
+5          4
 ---------------------------
 the calculations:
  
-sum: 188
-average: 37
-biggest: 90
-smallest: 1
-median: 30
+sum: 206
+average: 41
+biggest: 67
+smallest: 4
+median: 45
  
 --- range checker ---
-Here is your list: [12, 30, 1, 90, 55]
-Is within 0-40: 12
-Is within 0-40: 30
-Is within 0-40: 1
-Is not within 0-40: 90 
-Is not within 0-40: 55 
+Here is your list: [45, 67, 34, 56, 4]
+Is within 0-50: 45
+Is not within 0-50: 67 
+Is within 0-50: 34
+Is not within 0-50: 56 
+Is within 0-50: 4
  
-Amount of numbers within 0-40: 3
-Amount of numbers not within 0-40: 2
+Amount of numbers within 0-50: 3
+Amount of numbers not within 0-50: 2

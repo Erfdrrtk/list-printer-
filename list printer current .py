@@ -51,7 +51,7 @@ print('''
 --- range checker ---''')
 
 amount_of_numbers_in_theRange = 0
-amount_of_numbers_not_in_theRange = 0
+amount_of_numbers_not_in_theRange = 0 
 check_range = input('''
 Do you want me to check how many numbers from the list are in a certain range? If so, enter 'yes':  ''')
 try:

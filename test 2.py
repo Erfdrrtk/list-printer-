@@ -1,2 +1,0 @@
-x = 'cat'
-print(x) 
