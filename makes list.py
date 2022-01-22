@@ -1,3 +1,5 @@
+#  current version 1/15 8.03pm
+
 the_list = []
 
 print('''--- welcome to list printer ---
@@ -15,6 +17,4 @@ try:
 except:
     print("Only numbers please. Manually restart the code because I don't know how to make it restart itself. ")
     quit()
-
-print(f'''
-The list: {the_list} ''')
+    

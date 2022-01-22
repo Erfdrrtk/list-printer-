@@ -1,27 +1,27 @@
-The list: [45, 67, 34, 56, 4] 
+The list: [9, 978, 6, 645, 98] 
 ---------------------------
  count | number 
-1          45
-2          67
-3          34
-4          56
-5          4
+1          9
+2          978
+3          6
+4          645
+5          98
 ---------------------------
 the calculations:
  
-sum: 206
-average: 41
-biggest: 67
-smallest: 4
-median: 45
+sum: 1736
+average: 347
+biggest: 978
+smallest: 6
+median: 98
  
 --- range checker ---
-Here is your list: [45, 67, 34, 56, 4]
-Is within 0-50: 45
-Is not within 0-50: 67 
-Is within 0-50: 34
-Is not within 0-50: 56 
-Is within 0-50: 4
+Here is your list: [9, 978, 6, 645, 98]
+Is within 0-50: 9
+Is not within 0-50: 978 
+Is within 0-50: 6
+Is not within 0-50: 645 
+Is not within 0-50: 98 
  
-Amount of numbers within 0-50: 3
-Amount of numbers not within 0-50: 2
+Amount of numbers within 0-50: 2
+Amount of numbers not within 0-50: 3

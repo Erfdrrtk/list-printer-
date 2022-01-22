@@ -53,29 +53,42 @@ print('''
 
 amount_of_numbers_in_theRange = 0
 amount_of_numbers_not_in_theRange = 0 
-check_range = input('''
-Do you want me to check how many numbers from the list are in a certain range? If so, enter 'yes':  ''')
-try:
-    if check_range == 'yes':
-        print(f'Here is your list: {the_list}')
-        what_is_range = int(input('Enter the range 0-'))
-        print(' ')
-        for number in the_list:
-            if number in range(what_is_range + 1):
-                amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
-                print(f'Is within 0-{what_is_range}: {number}')
-            else:
-                amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
-                print(f"Is not within 0-{what_is_range}: {number} ")
-        print(' ')
-        print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
-        print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
 
-    else:
-        print('Ok. thank you for using list printer :).')
-        quit()
+try:
+    print(f'Here is your list: {the_list}')
+    what_is_range = int(input('Enter the range 0-'))
+    print(' ')
+    for number in the_list:
+        if number in range(what_is_range + 1):
+            amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
+            print(f'Is within 0-{what_is_range}: {number}')
+        else:
+            amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
+            print(f"Is not within 0-{what_is_range}: {number} ")
+    print(' ')
+    print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
+    print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+   
 except:
-    quit()
+    quit(print(" you broke the program lol"))
+
+
+
+# prime number checker:
+print("")
+print("--- prime checker ---")
+amount_of_numbers_that_are_prime = 0
+amount_of_numbers_not_prime = 0
+print(f"Here is your list: {the_list}")
+import sympy
+for number in the_list:
+	prime_checker = (sympy.isprime(the_list))
+	if prime_checker == False:
+		print(f'{number} is not a prime')
+	elif prime_checker:
+		print(f'{number} is a prime')
+
+
 
 
 # this will print all the results onto a file called out.txt

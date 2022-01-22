@@ -1,4 +1,4 @@
-# this needs the_list and count in order to work
+# this needs the_list and count in order to worku
 # the calculations
 import statistics
 

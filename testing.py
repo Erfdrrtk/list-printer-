@@ -1,13 +1,17 @@
-#  current version 1/15 8.03pm
+# working on new version 1/21/22
 
+# this function creats and allows the user to fill the list
+from __future__ import print_function
+import sympy
 import statistics
+
 the_list = []
 
-print('''--- welcome to list printer ---
-you will be allowed to fill the list, and then the program will make calculations for the list. Enjoy :D
-''')
-# This is the code that fills the list.
-# This try and except part will quit the program if the user enters something that causes an error in the program.
+print('--- welcome to list printer ---')
+print('you will be allowed to fill the list, and then the program will make calculations for the list. Enjoy :D')
+print(' ')
+
+# this part fills the list:
 try:
     times_asked = 0
     how_many_numbers = int(input('Enter the amount of numbers you want there to be in your list: '))
@@ -18,97 +22,88 @@ try:
 except:
     print("Only numbers please. Manually restart the code because I don't know how to make it restart itself. ")
     quit()
+print(' ')
+print(f'The list: {the_list}')
 
-print(f'''
-The list: {the_list} ''')
+
+# this part creats count which will be needed for the calulations, then it neatly displays the list.
 
 count = 0
-print('''---------------------------
- count | number ''')
+print('---------------------------')
+print('count | number ')
 # this adds 1 to count for each number in the list
 for number in the_list:
     count = 1 + count
     print(f'{count}          {number}')
 
 
-# the calculations
-print('''---------------------------
-the calculations:
-''')
-sum = sum(the_list)
-average = sum / count
-biggest = max(the_list)
-smallest = min(the_list)
-median = statistics.median(the_list)
-print(f'sum: {sum}')
-print(f'average: {int(average)}')
-print(f'biggest: {biggest}')
-print(f'smallest: {smallest}')
-print(f'median: {median}')
 
-# this part checks how many numbers are within a certain range(that the user inputs)
-print('''
---- range checker ---''')
+# this asks the user for instructions:
+amount_prime = 0
+amount_not_prime = 0
+amount_range = 0
+amount_not_range = 0
 
-amount_of_numbers_in_theRange = 0
-amount_of_numbers_not_in_theRange = 0
-check_range = input('''
-Do you want me to check how many numbers from the list are in a certain range? If so, enter 'yes':  ''')
-try:
-    if check_range == 'yes':
-        print(f'Here is your list: {the_list}')
-        what_is_range = int(input('Enter the range 0-'))
-        print(' ')
-        for number in the_list:
-            if number in range(what_is_range + 1):
-                amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
-                print(f'Is within 0-{what_is_range}: {number}')
-            else:
-                amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
-                print(f"Is not within 0-{what_is_range}: {number} ")
-        print(' ')
-        print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
-        print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+make_program_run = True
+while make_program_run:
+    decision = input("what would you like me to do? type help to show the options ")
 
-    else:
-        print('Ok. thank you for using list printer :).')
-        quit()
-except:
-    quit()
+if decision == 'help':
+    print('''
+quit - quits the program
+sum - finds the sum 
+small - finds the smallest 
+big - finds the biggest 
+median - finds the median 
+average - finds the average 
+prime - checks which numbers are prime and not prime
+range - checks how many numbers are within a certain range''')
+elif decision == 'quit':
+    quit(print('thank you for using list printer!'))
+elif decision == 'sum':
+    sum = sum(the_list)
+    print(sum)
+
+elif decision == 'small':
+    small = min(the_list)
+    print(small)
+
+elif decision == 'big':
+    biggest = max(the_list)
+    print(biggest)
+
+elif decision == 'median':
+    median = statistics.median(the_list)
+    print(median)
+
+elif decision == 'average':
+    average = average(the_list)
+    print(average)
+
+elif decision == 'prime':
+    for number in the_list:
+        prime_checker = (sympy.isprime(the_list))
+        if prime_checker == False:
+            print(f'{number} is not a prime')
+        elif prime_checker:
+            print(f'{number} is a prime')
+
+elif decision == 'range':
+    what_is_range = int(input('Enter the range 0-'))
+    print(' ')
+    for number in the_list:
+        if number in range(what_is_range + 1):
+            amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
+            print(f'Is within 0-{what_is_range}: {number}')
+        else:
+            amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
+            print(f"Is not within 0-{what_is_range}: {number} ")
+    print(' ')
+    print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
+    print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+
+                
 
 
-# this will print all the results onto a file called out.txt
-from contextlib import redirect_stdout
 
-with open('out.txt', 'w') as f:
-    with redirect_stdout(f):
-        print(f'The list: {the_list} ')
-        count = 0
-        print('---------------------------')
-        print(' count | number ')
-        # this adds 1 to count for each number in the list
-        for number in the_list:
-            count = 1 + count
-            print(f'{count}          {number}')
-        print('---------------------------')
-        print('the calculations:')
-        print(' ')
-        print(f'sum: {sum}')
-        print(f'average: {int(average)}')
-        print(f'biggest: {biggest}')
-        print(f'smallest: {smallest}')
-        print(f'median: {median}')
-
-        print(' ')
-        print('--- range checker ---')
-        print(f'Here is your list: {the_list}')
-        for number in the_list:
-            if number in range(what_is_range):
-                amount_of_numbers_in_theRange = amount_of_numbers_in_theRange
-                print(f'Is within 0-{what_is_range}: {number}')
-            else:
-                amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange
-                print(f"Is not within 0-{what_is_range}: {number} ")
-        print(' ')
-        print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
-        print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+    
