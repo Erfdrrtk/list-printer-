@@ -2,11 +2,12 @@
 
 # this function creats and allows the user to fill the list
 from __future__ import print_function
+from audioop import avg
 import sympy
 import statistics
 
 the_list = []
-
+print(' ')
 print('--- welcome to list printer ---')
 print('you will be allowed to fill the list, and then the program will make calculations for the list. Enjoy :D')
 print(' ')
@@ -44,12 +45,12 @@ amount_not_prime = 0
 amount_range = 0
 amount_not_range = 0
 
-make_program_run = True
-while make_program_run:
-    decision = input("what would you like me to do? type help to show the options ")
 
-if decision == 'help':
-    print('''
+while True:
+    decision = input('''
+what would you like me to do? type help to show the options:  ''')
+    if decision == 'help':
+        print('''
 quit - quits the program
 sum - finds the sum 
 small - finds the smallest 
@@ -58,49 +59,53 @@ median - finds the median
 average - finds the average 
 prime - checks which numbers are prime and not prime
 range - checks how many numbers are within a certain range''')
-elif decision == 'quit':
-    quit(print('thank you for using list printer!'))
-elif decision == 'sum':
-    sum = sum(the_list)
-    print(sum)
+    elif decision == 'quit':
+        quit(print('thank you for using list printer!'))
 
-elif decision == 'small':
-    small = min(the_list)
-    print(small)
+    elif decision == 'sum':
+        sum = sum(the_list)
+        print(sum)
 
-elif decision == 'big':
-    biggest = max(the_list)
-    print(biggest)
+    elif decision == 'small':
+        small = min(the_list)
+        print(small)
 
-elif decision == 'median':
-    median = statistics.median(the_list)
-    print(median)
+    elif decision == 'big':
+        biggest = max(the_list)
+        print(biggest)
 
-elif decision == 'average':
-    average = average(the_list)
-    print(average)
+    elif decision == 'median':
+        median = statistics.median(the_list)
+        print(median)
 
-elif decision == 'prime':
-    for number in the_list:
-        prime_checker = (sympy.isprime(the_list))
-        if prime_checker == False:
-            print(f'{number} is not a prime')
-        elif prime_checker:
-            print(f'{number} is a prime')
+    elif decision == 'average':
+        sum = sum(the_list)
+        average = sum / count
+        print(average)
 
-elif decision == 'range':
-    what_is_range = int(input('Enter the range 0-'))
-    print(' ')
-    for number in the_list:
-        if number in range(what_is_range + 1):
-            amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
-            print(f'Is within 0-{what_is_range}: {number}')
-        else:
-            amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
-            print(f"Is not within 0-{what_is_range}: {number} ")
-    print(' ')
-    print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
-    print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+    elif decision == 'prime':
+        for number in the_list:
+            prime_checker = (sympy.isprime(the_list))
+            if prime_checker == False:
+                print(f'{number} is not a prime')
+            elif prime_checker:
+                print(f'{number} is a prime')
+
+    elif decision == 'range':
+        amount_of_numbers_in_theRange = 0
+        amount_of_numbers_not_in_theRange = 0       
+        what_is_range = int(input('Enter the range 0-'))
+        print(' ')
+        for number in the_list:
+            if number in range(what_is_range + 1):
+                amount_of_numbers_in_theRange = amount_of_numbers_in_theRange + 1
+                print(f'Is within 0-{what_is_range}: {number}')
+            else:
+                amount_of_numbers_not_in_theRange = amount_of_numbers_not_in_theRange + 1
+                print(f"Is not within 0-{what_is_range}: {number} ")
+        print(' ')
+        print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
+        print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
 
                 
 
