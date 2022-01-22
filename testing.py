@@ -44,7 +44,7 @@ amount_prime = 0
 amount_not_prime = 0
 amount_range = 0
 amount_not_range = 0
-
+sum = sum(the_list)
 
 while True:
     decision = input('''
@@ -58,12 +58,13 @@ big - finds the biggest
 median - finds the median 
 average - finds the average 
 prime - checks which numbers are prime and not prime
-range - checks how many numbers are within a certain range''')
+range - checks how many numbers are within a certain range
+list - prints the list''')
+
     elif decision == 'quit':
         quit(print('thank you for using list printer!'))
 
     elif decision == 'sum':
-        sum = sum(the_list)
         print(sum)
 
     elif decision == 'small':
@@ -79,7 +80,6 @@ range - checks how many numbers are within a certain range''')
         print(median)
 
     elif decision == 'average':
-        sum = sum(the_list)
         average = sum / count
         print(average)
 
@@ -106,6 +106,12 @@ range - checks how many numbers are within a certain range''')
         print(' ')
         print(f'Amount of numbers within 0-{what_is_range}: {amount_of_numbers_in_theRange}')
         print(f'Amount of numbers not within 0-{what_is_range}: {amount_of_numbers_not_in_theRange}')
+
+    elif decision == 'list':
+        print(the_list)
+
+    else:
+        print('that is not a command.')
 
                 
 
